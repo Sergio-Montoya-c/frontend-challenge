@@ -19,8 +19,8 @@ export default function MediaBanner(props: MediaBannerExtendedProps) {
   } = props;
 
   const imageContainer = img && (
-    <div className={`relative aspect-square md:aspect-auto ${orientation === 'right' ? 'md:order-1' : ''}`} data-testid="banner-image">
-      { img && <Image {...img} alt={img.alt || ""} fill style={{objectFit: 'cover'}} loading='lazy' />}
+    <div className={`relative aspect-square md:aspect-auto ${orientation === 'right' ? 'md:order-1' : ''}`}>
+      <Image {...img} alt={img.alt || ""} fill style={{objectFit: 'cover'}} priority sizes='(max-width: 768px) 100vw, 100px' />
     </div>
   );
 
