@@ -11,14 +11,16 @@ export interface Button {
   href: string;
 }
 
+export interface MediaBanner {
+  img?: Image;
+  leadingText?: string;
+  heading?: string;
+  orientation?: "left" | "right";
+  button?: Button;
+}
+
 export interface MockData {
-  mediaBanner: {
-    img?: Image;
-    leadingText?: string;
-    heading?: string;
-    orientation?: "left" | "right";
-    button?: Button;
-  };
+  mediaBanner: MediaBanner;
   itemRow: {
     heading?: string;
     items?: {
